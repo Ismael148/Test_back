@@ -1,24 +1,13 @@
-# README
+---
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+---
 
-* Ruby version
+<h1 id="gestion-de-voiture-des-clients">Gestion de voiture des clients</h1>
+<p>Ce projet consiste à  utiliser la méthode CRUD en relation avec la base de donnée pour la gestion des voitures des clients avec le language Ruby on rails</p>
+<h1 id="pré-requis">Pré-requis</h1>
+<p>Avant de lancer le projet , il faut migrer la base de données</p>
+<blockquote>
+<p>~$ rails db:migrate</p>
+</blockquote>
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
