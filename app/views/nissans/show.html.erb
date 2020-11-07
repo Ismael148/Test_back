@@ -1,0 +1,9 @@
+<div class="container" style="margin-top: 10px;width: 6OOpx;">
+     <%= image_tag("https://images.dubizzle.com/v1/files/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmbiI6InZ5cWxydzN1MXJ1dC1EVUJJWlpMRSIsInciOlt7ImZuIjoiNWpldWk3cWZ6aWU2MS1EVUJJWlpMRSIsInMiOjUwLCJwIjoiY2VudGVyLGNlbnRlciIsImEiOjgwfV19.R6Crvk_bHrqPrIoIViBE5aySO2WrKLMAYhAtc5jYQks/image;p=thumb_retina", :alt => "banner", :style => "width: 100px;height:80px; float: left;margin-right: 20px") %>
+
+<h1> <span style="font-size: smaller;">Nom</span> : <%= @nissans.name %></h1>
+<p> Couleur : <%= @nissans.description %></p>
+<p>Kilomètrage : <%= @nissans.kilometers %></p>
+
+<a href="<%= nissans_path %>" class="btn btn-primary" style="margin-right: 10px;">Revenir</a><a href="<%= edit_nissan_path(@nissans.id)%>"><button type="button" class="btn btn-dark" style="margin-right: 10px;">Editer</button></a> <a href="<%= nissan_path(@nissans.id)%>"><button type="button" class="btn btn-danger"data-confirm="Êtes-vous sur?"data-method="delete">Supprimer</button></a> 
+ </div>

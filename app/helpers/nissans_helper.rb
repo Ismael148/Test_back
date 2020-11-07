@@ -1,0 +1,2 @@
+module NissansHelper
+end

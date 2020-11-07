@@ -1,0 +1,3 @@
+class Audi < ApplicationRecord
+
+end

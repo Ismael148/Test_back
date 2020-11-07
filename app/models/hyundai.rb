@@ -1,0 +1,2 @@
+class Hyundai < ApplicationRecord
+end

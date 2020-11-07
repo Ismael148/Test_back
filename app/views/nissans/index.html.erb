@@ -1,0 +1,27 @@
+<%= link_to root_path do %>
+    <%= image_tag "arrow.png", class: "arrow", style: "width: 50px; margin-left:125px" %>
+    
+ <% end %>
+ <h1 style="text-align: left;margin-left: 135px;">Nissan</h1><p>
+     <a href="<%= new_nissan_path%>"> <button class="btn btn-success" style="margin-left: 135px;">Ajouter</button> </a>
+ 
+ 
+ 
+ <% @nissans.each do |nissan| %>
+ 
+ <div class="container">
+     <div class="row">
+         <div class="col-3" style="width: 100%;">
+             <div class="card" style="width: 600px;">
+                     <div class="card-body" style="float: right; width: 100%;">
+                       <%= image_tag("https://www.automobile-magazine.fr/asset/cms/169124/config/117937/426187482-3-6-source.jpg", :alt => "banner", :style => "width: 100px;height:80px; float: left;margin-right: 20px") %> 
+                         <h5 class="card-title"><%= nissan.name %></h5>
+                         <p class="card-text">description : <%= nissan.description %></p>
+                         <p class="card-text">Kilometrage : <%= nissan.kilometers%></p>
+                         <a href="<%= nissan_path(nissan.id) %>" class="btn btn-primary">voir</a> 
+                      </div>
+             </div>
+         </div>
+     </div>
+ </div>
+ <% end %>

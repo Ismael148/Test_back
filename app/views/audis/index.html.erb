@@ -1,0 +1,30 @@
+<%= link_to root_path do %>
+   <%= image_tag "arrow.png", class: "arrow", style: "width: 50px; margin-left:125px" %>
+   
+<% end %>
+<h1 style="text-align: left;margin-left: 135px;">Audi</h1><p>
+    <a href="<%= new_audi_path%>"> <button class="btn btn-success" style="margin-left: 135px;">Ajouter</button> </a>
+
+
+
+<% @audis.each do |audi| %>
+
+<div class="container">
+    <div class="row">
+        <div class="col-3" style="width: 100%;">
+            <div class="card" style="width: 600px;">
+                    <div class="card-body" style="float: right; width: 100%;">
+                        
+                      <%= image_tag("https://images.dubizzle.com/v1/files/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmbiI6InZ5cWxydzN1MXJ1dC1EVUJJWlpMRSIsInciOlt7ImZuIjoiNWpldWk3cWZ6aWU2MS1EVUJJWlpMRSIsInMiOjUwLCJwIjoiY2VudGVyLGNlbnRlciIsImEiOjgwfV19.R6Crvk_bHrqPrIoIViBE5aySO2WrKLMAYhAtc5jYQks/image;p=thumb_retina", :alt => "banner", :style => "width: 100px;height:80px; float: left;margin-right: 20px") %> 
+                        <h5 class="card-title"><%= audi.name %></h5>
+                        <p class="card-text">description : <%= audi.description %></p>
+                        <p class="card-text">Kilometrage : <%= audi.kilometers%></p>
+                        <a href="<%= audi_path(audi.id) %>" class="btn btn-primary">voir</a> 
+                     </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<% end %>
+

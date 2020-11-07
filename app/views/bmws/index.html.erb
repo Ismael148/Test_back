@@ -1,0 +1,29 @@
+<%= link_to root_path do %>
+    <%= image_tag "arrow.png", class: "arrow", style: "width: 50px; margin-left:125px" %>
+    
+ <% end %>
+ <h1 style="text-align: left;margin-left: 135px;">BMW</h1><p>
+     <a href="<%= new_bmw_path%>"> <button class="btn btn-success" style="margin-left: 135px;">Ajouter</button> </a>
+ 
+ 
+ 
+ <% @bmws.each do |bmw| %>
+ 
+ <div class="container">
+     <div class="row">
+         <div class="col-3" style="width: 100%;">
+             <div class="card" style="width: 600px;">
+                     <div class="card-body" style="float: right; width: 100%;">
+                         
+                       <%= image_tag("https://cloud.leparking.fr/2020/03/18/00/21/bmw-serie-3-gt-bmw-3-series-gran-turismo-2-0-318d-luxury-gt-s-s-5drfsh-leather-nav-elec-tailgate-beige_7498598143.jpg", :alt => "banner", :style => "width: 100px;height:80px; float: left;margin-right: 20px") %> 
+                         <h5 class="card-title"><%= bmw.name %></h5>
+                         <p class="card-text">description : <%= bmw.description %></p>
+                         <p class="card-text">Kilometrage : <%= bmw.kilometers%></p>
+                         <a href="<%= bmw_path(bmw.id) %>" class="btn btn-primary">voir</a> 
+                      </div>
+             </div>
+         </div>
+     </div>
+ </div>
+ 
+ <% end %>
